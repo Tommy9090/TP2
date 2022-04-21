@@ -86,6 +86,8 @@ int main(int argc, char** argv) {
 	unsigned char *img = stbi_load("assets/31.bmp", &width, &height, &channels, 0);
 	size_t img_size = width * height * channels;
 
+	AdjMatrix* graph = create_graph(img_size);
+
 	if (img != NULL)
 	{
 		for (unsigned char* pixel = img; pixel < img + img_size; pixel += 3)
