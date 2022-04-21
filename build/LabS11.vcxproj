@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Develop|x64">
+			<Configuration>Develop</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Develop|Win32">
+			<Configuration>Develop</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{42C42392-B403-48FE-BA72-75C8E7CC4DBB}</ProjectGuid>
+		<VCProjectVersion>16.0</VCProjectVersion>
+		<WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Develop'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Develop'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<PlatformToolset>v142</PlatformToolset>
+		<PreferredToolArchitecture>x64</PreferredToolArchitecture>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<CharacterSet>Unicode</CharacterSet>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+<Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='x64'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>Disabled</Optimization>
+				<PreprocessorDefinitions>_DEBUG;SYS_64;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>Disabled</Optimization>
+				<PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Develop|x64'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>Full</Optimization>
+				<PreprocessorDefinitions>_DEBUG;SYS_64;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+				<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>Full</Optimization>
+				<PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+				<BasicRuntimeChecks>Default</BasicRuntimeChecks>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>MaxSpeed</Optimization>
+				<FunctionLevelLinking>true</FunctionLevelLinking>
+				<IntrinsicFunctions>true</IntrinsicFunctions>
+				<PreprocessorDefinitions>NDEBUG;SYS_64;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<EnableCOMDATFolding>true</EnableCOMDATFolding>
+				<OptimizeReferences>true</OptimizeReferences>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+		<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+			<ClCompile>
+				<AdditionalIncludeDirectories>D:\TommyT\TechProg\TP2\optick\include</AdditionalIncludeDirectories>
+				<AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+				<WarningLevel>Level3</WarningLevel>
+				<Optimization>MaxSpeed</Optimization>
+				<FunctionLevelLinking>true</FunctionLevelLinking>
+				<IntrinsicFunctions>true</IntrinsicFunctions>
+				<PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+				<RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+				<MultiProcessorCompilation>true</MultiProcessorCompilation>
+				<MinimalRebuild>false</MinimalRebuild>
+			</ClCompile>
+			<Link>
+				<SubSystem>Console</SubSystem>
+				<GenerateDebugInformation>true</GenerateDebugInformation>
+				<EnableCOMDATFolding>true</EnableCOMDATFolding>
+				<OptimizeReferences>true</OptimizeReferences>
+				<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			</Link>
+			<Manifest>
+				<EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+			</Manifest>
+		</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick.config.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_capi.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_common.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.freebsd.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.linux.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.macos.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.platform.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.win.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_gpu.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_memory.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_message.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_miniz.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_serialization.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_server.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\labo.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\stb_image.h" />
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\stb_image_write.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_capi.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_gpu.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_message.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_miniz.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_serialization.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_server.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\Sources\labo.cpp" />
+		<ClCompile Include="D:\TommyT\TechProg\TP2\Sources\main.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+</ItemGroup>
+	<ItemGroup>
+		<None Include="icon.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="resources.rc" />
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets">
+		<Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+	</ImportGroup>
+</Project>

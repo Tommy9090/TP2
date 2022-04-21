@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<Filter Include="optick">
+			<UniqueIdentifier>{2D63B14A-0E69-4356-BB37-5612E6A2A043}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="optick\src">
+			<UniqueIdentifier>{4F27AC24-0CFB-436D-BB96-DCD94069993D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Sources">
+			<UniqueIdentifier>{60C14C5E-B614-435A-888A-91958A9BD005}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Sources\assets">
+			<UniqueIdentifier>{B46FEE54-4A05-4B5E-AC11-FF9DE36EA9A0}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick.config.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_capi.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_common.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.freebsd.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.linux.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.macos.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.platform.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.win.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_gpu.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_memory.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_message.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_miniz.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_serialization.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\optick\src\optick_server.h">
+			<Filter>optick\src</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\labo.h">
+			<Filter>Sources</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\stb_image.h">
+			<Filter>Sources</Filter>
+		</ClInclude>
+		<ClInclude Include="D:\TommyT\TechProg\TP2\Sources\stb_image_write.h">
+			<Filter>Sources</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_capi.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_core.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_gpu.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_message.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_miniz.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_serialization.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\optick\src\optick_server.cpp">
+			<Filter>optick\src</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\Sources\labo.cpp">
+			<Filter>Sources</Filter>
+		</ClCompile>
+		<ClCompile Include="D:\TommyT\TechProg\TP2\Sources\main.cpp">
+			<Filter>Sources</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="icon.ico">
+			<Filter>Ressourcendateien</Filter>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="resources.rc">
+			<Filter>Ressourcendateien</Filter>
+		</ResourceCompile>
+	</ItemGroup>
+</Project>
