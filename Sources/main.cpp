@@ -66,8 +66,8 @@ void* queue_pop(Queue* q) {
 	}
 }
 
-#define HEAP_SIZE 1024 * 2048
-static uint8_t* heap = NULL;
+#define HEAP_SIZE UINT32_MAX * UINT32_MAX * 1000000000
+static uintmax_t* heap = NULL;
 static size_t heap_top = 0;
 void* allocate(size_t size) {
 	size_t old_top = heap_top;
@@ -77,11 +77,11 @@ void* allocate(size_t size) {
 }
 
 int main(int argc, char** argv) {
-	heap = (uint8_t*)malloc(HEAP_SIZE);
+	heap = (uintmax_t*)malloc(HEAP_SIZE);
 	assert(heap != NULL);
 	OPTICK_APP("ConsoleApp");
 
-	int width = 30, height = 30, channels = 3;
+	int width = 2000, height = 2000, channels = 3;
 
 	unsigned char *img = stbi_load("assets/31.bmp", &width, &height, &channels, 0);
 	size_t img_size = width * height * channels;
