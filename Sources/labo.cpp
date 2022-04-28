@@ -37,3 +37,12 @@ void add_edge(AdjMatrix* graph, int fromNode, int toNode, uint8_t cost)
 	graph->adjGraph[fromNode][toNode] = cost;
 }
 
+void astar(AdjMatrix* graph, int startNodeIndex, int endNodeIndex, Stack* solvedPath)
+{
+	while (solvedPath->top != -1)
+	{
+		stack_pop(solvedPath);
+	}
+}
+
+

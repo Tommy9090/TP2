@@ -74,4 +74,4 @@ void add_edge(AdjMatrix* graph, int fromNode, int toNode, uint8_t cost);
 //* Essayer d'utiliser la fonction avec build_groups et sans build_groups
 //* Utiliser OPTICK_EVENT(); pour enregistrer la fonction dans le profiler
 //*/
-//void astar(AdjMatrix* graph,int startNodeIndex, int endNodeIndex, Stack* solvedPath);
+void astar(AdjMatrix* graph,int startNodeIndex, int endNodeIndex, Stack* solvedPath);

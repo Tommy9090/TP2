@@ -66,8 +66,8 @@ void* queue_pop(Queue* q) {
 	}
 }
 
-#define HEAP_SIZE UINT32_MAX * UINT32_MAX * 1000000000
-static uintmax_t* heap = NULL;
+#define HEAP_SIZE UINT32_MAX // * UINT32_MAX * 9999999999
+static uint8_t* heap = NULL;
 static size_t heap_top = 0;
 void* allocate(size_t size) {
 	size_t old_top = heap_top;
@@ -77,22 +77,49 @@ void* allocate(size_t size) {
 }
 
 int main(int argc, char** argv) {
-	heap = (uintmax_t*)malloc(HEAP_SIZE);
+	heap = (uint8_t*)malloc(HEAP_SIZE);
 	assert(heap != NULL);
 	OPTICK_APP("ConsoleApp");
 
-	int width = 2000, height = 2000, channels = 3;
+	int width = 31, height = 31, channels = 3;
 
 	unsigned char *img = stbi_load("assets/31.bmp", &width, &height, &channels, 0);
 	size_t img_size = width * height * channels;
 
-	AdjMatrix* graph = create_graph(img_size);
+	size_t pixelBlanc = 0;
+	for (unsigned char* pixel = img; pixel < img + img_size; pixel += 3)
+	{
+		if (pixel[1] == 255)
+		{
+			pixelBlanc += 1;
+		}
+	}
+	AdjMatrix* graph = create_graph(pixelBlanc);
+
+	int count = 0;
+
+	Vector2 pos = { 0 };
+	int i = 0;
 
 	if (img != NULL)
 	{
 		for (unsigned char* pixel = img; pixel < img + img_size; pixel += 3)
 		{
 			
+
+			if (pixel[1] == 255)
+			{
+				pos.x = i % width;
+				pos.y = i / width;
+				add_node(graph, pixel, pos);
+
+
+
+				pixel[0] = 255;
+				pixel[1] = 0;
+				pixel[2] = 0;
+			}
+			i++;
 		}
 		printf("w:%dpx,h:%dpx and %d channels\n", width, height, channels);
 	}
@@ -102,7 +129,8 @@ int main(int argc, char** argv) {
 		exit(1);
 	}
 
-
+	stbi_write_bmp("assets/31F.bmp", width, height, channels, img);
+	stbi_image_free(img);
 
 
 
